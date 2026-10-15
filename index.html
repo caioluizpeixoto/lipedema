@@ -315,11 +315,11 @@
   <!-- ==============================================
        FASE 3: A PÁGINA DA VSL (A Consulta Especializada)
   ============================================== -->
-  <section id="vsl-section" class="funnel-section">
+  <section id="vsl-section" class="funnel-section vsl-locked">
     <div class="container vsl-container">
 
       <!-- Top Result Alert Ribbon -->
-      <div class="vsl-alert-banner">
+      <div class="vsl-alert-banner vsl-reveal">
         <div class="alert-icon">⚠️</div>
         <div class="alert-content">
           <div class="alert-tag">RESULTADO PRELIMINAR CONFIRMADO</div>
@@ -445,7 +445,7 @@
         </div>
 
         <!-- Testing Shortcut Switch (For convenience) -->
-        <div class="test-unlock-bar">
+        <div class="test-unlock-bar" hidden>
           <span>Deseja ler o laudo completo e liberar o protocolo de imediato?</span>
           <button type="button" class="btn-instant-unlock" id="btn-instant-unlock">
             ⚡ Liberar Oferta e Receita Caseira Agora
@@ -454,7 +454,7 @@
       </div>
 
       <!-- Personalized Clinical Report Card (Laudo Baseado nas Respostas) -->
-      <section class="patient-report-card">
+      <section class="patient-report-card vsl-reveal">
         <div class="report-header">
           <div class="report-badge">LAUDO INDIVIDUAL DE TRIAGEM</div>
           <div class="report-id">Registro: #LIP-<span id="report-code">84920</span></div>
@@ -495,7 +495,7 @@
       </section>
 
       <!-- The Medical Explanation: Why Diets Fail (Medical Diagram Section) -->
-      <section class="scientific-breakdown-section">
+      <section class="scientific-breakdown-section vsl-reveal">
         <div class="section-title-box">
           <span class="section-tag">A CIÊNCIA POR TRÁS DO PROBLEMA</span>
           <h2 class="section-heading">Por que Dietas Comuns e Musculação Não Eliminam as "Bolas de Gordura"?</h2>
@@ -544,7 +544,7 @@
       <!-- ==============================================
            THE SOLUTION & CTA SECTION (Oferta Desbloqueada)
       ============================================== -->
-      <div id="vsl-pitch-section" class="vsl-pitch-section">
+      <div id="vsl-pitch-section" class="vsl-pitch-section vsl-reveal">
 
         <!-- Pitch Header -->
         <div class="solution-header-card">

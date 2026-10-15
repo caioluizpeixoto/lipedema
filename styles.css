@@ -2779,3 +2779,23 @@ body {
     height: 240px;
   }
 }
+
+/* =====================================================================
+   VSL BLOQUEADA: só o título e o vídeo até a VSL terminar
+   ===================================================================== */
+#vsl-section.vsl-locked .vsl-reveal {
+  display: none;
+}
+
+.test-unlock-bar[hidden] {
+  display: none;
+}
+
+#vsl-section .vsl-reveal {
+  animation: vslRevealFadeIn 0.8s ease both;
+}
+
+@keyframes vslRevealFadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
