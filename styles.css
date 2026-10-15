@@ -2779,3 +2779,183 @@ body {
     height: 240px;
   }
 }
+
+/* =====================================================================
+   VSL BLOQUEADA: só o título e o vídeo até a VSL terminar
+   ===================================================================== */
+#vsl-section.vsl-locked .vsl-reveal {
+  display: none;
+}
+
+.test-unlock-bar[hidden] {
+  display: none;
+}
+
+#vsl-section .vsl-reveal {
+  animation: vslRevealFadeIn 0.8s ease both;
+}
+
+@keyframes vslRevealFadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================================================================
+   OTIMIZAÇÃO MOBILE (a página é usada só no celular)
+   Coluna estreita, menos padding aninhado e títulos proporcionais
+   ===================================================================== */
+.container {
+  max-width: 480px;
+  padding: 0 14px;
+}
+
+#intro-section,
+#quiz-section {
+  padding: 18px 0 40px;
+}
+
+#vsl-section {
+  padding: 18px 0 48px;
+}
+
+/* Cartões: menos padding para o texto respirar na largura do celular */
+.intro-hero-card {
+  padding: 22px 16px;
+}
+
+.quiz-card {
+  padding: 22px 16px;
+}
+
+.scanner-card {
+  padding: 28px 16px;
+}
+
+.patient-report-card,
+.scientific-breakdown-section,
+.recipe-showcase-card,
+.offer-body {
+  padding: 20px 16px;
+}
+
+.before-after-spotlight-card,
+.final-checkout-reminder {
+  padding: 22px 16px;
+}
+
+.checkout-modal-box {
+  padding: 24px 18px;
+}
+
+/* Títulos proporcionais à tela */
+.intro-main-title {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.quiz-main-title {
+  font-size: 1.4rem;
+  line-height: 1.25;
+}
+
+.question-title {
+  font-size: 1.3rem;
+}
+
+.analysis-title {
+  font-size: 1.4rem;
+  line-height: 1.25;
+}
+
+.vsl-main-headline {
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+
+.section-heading {
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.solution-title {
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+
+.offer-product-name {
+  font-size: 1.4rem;
+}
+
+.recipe-box-title,
+.ba-title,
+.final-checkout-reminder h3 {
+  font-size: 1.2rem;
+}
+
+.main-price .amount {
+  font-size: 3rem;
+}
+
+.cta-main-text {
+  font-size: 1.15rem;
+}
+
+.intro-highlight-subtitle,
+.vsl-subheadline,
+.solution-lead {
+  font-size: 1rem;
+}
+
+/* Aviso urgente: ícone menor no topo, texto na largura toda */
+.urgent-warning-box {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  padding: 14px;
+  margin-bottom: 18px;
+}
+
+.warning-icon-flash {
+  font-size: 1.5rem;
+}
+
+/* Mensagem do médico: foto em cima, texto na largura toda */
+.intro-doctor-card {
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  padding: 16px 14px;
+}
+
+.doctor-avatar-box {
+  width: 64px;
+  height: 64px;
+}
+
+/* Banner de resultado da VSL */
+.vsl-alert-banner {
+  padding: 12px 14px;
+  gap: 10px;
+}
+
+.intro-benefits-box {
+  padding: 18px 14px;
+}
+
+.intro-trust-bar {
+  gap: 8px;
+}
+
+/* Faixa "mulheres assistindo" em uma linha, sem quebrar em colunas */
+.vsl-live-meta {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 8px;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+}
+
+.vsl-live-meta .meta-separator {
+  display: none;
+}

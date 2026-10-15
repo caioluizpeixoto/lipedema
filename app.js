@@ -563,11 +563,24 @@ function setupVslPlayer() {
 
   // Atalho para liberar a oferta imediatamente
   btnInstantUnlock.addEventListener("click", () => {
+    unlockVslContent();
     const pitchSection = document.getElementById("vsl-pitch-section");
     if (pitchSection) {
       pitchSection.scrollIntoView({ behavior: "smooth" });
     }
   });
+}
+
+// Libera o laudo, as provas sociais e os botões de compra quando a VSL termina
+function unlockVslContent() {
+  const vslSec = document.getElementById("vsl-section");
+  if (!vslSec.classList.contains("vsl-locked")) return;
+  vslSec.classList.remove("vsl-locked");
+
+  const playerWrapper = document.querySelector(".vsl-player-wrapper");
+  if (playerWrapper && playerWrapper.nextElementSibling) {
+    playerWrapper.nextElementSibling.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 }
 
 function startOrResumeVsl() {
@@ -584,6 +597,7 @@ function startOrResumeVsl() {
     if (vslCurrentTime >= TOTAL_VSL_DURATION) {
       vslCurrentTime = TOTAL_VSL_DURATION;
       pauseVsl();
+      unlockVslContent();
     }
     updateVslUI();
   }, 1000);
